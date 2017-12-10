@@ -39,6 +39,10 @@ body {
     font-size: 13px;
 }
 
+.no-margin {
+    margin: 0 !important;
+}
+
 .no-padding {
     padding: 0 !important
 }
@@ -94,7 +98,12 @@ body {
         padding: 0;
     }
 }
-
+@media (max-width: 750px) {
+    /* hide the search input*/
+    .search-input {
+        display: none;
+    }
+}
 
 /* Animation */
 
@@ -167,19 +176,19 @@ body {
     margin-left: 230px
 }
 
-.top-nav .navbar-right li {
+.top-nav .header-right li {
     display: inline-block;
     float: right;
     position: static
 }
 
 @media (min-width: 480px) {
-    .top-nav .navbar-right li {
+    .top-nav .header-right li {
         position: relative
     }
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 1350px) {
     .header-date span {
         text-overflow: ellipsis;
         width: 230px;
@@ -189,7 +198,7 @@ body {
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1250px) {
     .header-date span {
         text-overflow: ellipsis;
         width: 135px;
@@ -199,13 +208,19 @@ body {
     }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 1050px) {
     .header-date span {
         text-overflow: ellipsis;
         width: 50px;
         margin: 0 0 2em 0;
         white-space: nowrap;
         overflow: hidden;
+    }
+}
+
+@media (max-width: 810px) {
+    .header-date span {
+        display: none !important;
     }
 }
 
@@ -226,29 +241,22 @@ body {
     z-index: 2
 }
 
-.top-nav .nav>li>a:focus,
-.top-nav .nav>li>a:hover,
-.top-nav .nav .open>a,
-.top-nav .nav .open>a:focus,
-.top-nav .nav .open>a:hover {
+.top-nav .header-right>li>a:focus,
+.top-nav .header-right>li>a:hover,
+.top-nav .header-right .open>a,
+.top-nav .header-right .open>a:focus,
+.top-nav .header-right .open>a:hover {
     background: #303338;
 }
 
-.top-nav .nav>li {
+.top-nav .header-right>li {
     margin: 0 5px 0 5px;
+    position: relative;
 }
 
-.navbar-nav {
+.header-right {
     margin: 0;
-}
-
-.navbar-nav>li>a {
-    line-height: 23px;
-}
-
-.navbar-nav>li>a>i {
-    font-weight: bold;
-    font-size: 22px;
+    padding-right: 0;
 }
 
 .header-date {
@@ -367,7 +375,15 @@ body {
     color: #23262d;
 }
 
-
+.header-right>li>a {
+    line-height: 36px;
+    display: block;
+    padding: 10px 15px;
+}
+.header-right>li>a>i {
+    font-weight: bold;
+    font-size: 22px;
+}
 /* /Header*/
 
 
@@ -395,7 +411,7 @@ body {
     color: #5A738E
 }
 
-.navbar-nav .open .dropdown-menu {
+.header-right .open .dropdown-menu {
     position: absolute;
     background: #fff;
     margin-top: 0;
@@ -895,7 +911,7 @@ ul.msg-list li a .message {
     white-space: normal
 }
 
-.navbar-nav .open .dropdown-menu.msg-list {
+.header-right .open .dropdown-menu.msg-list {
     width: 300px
 }
 
