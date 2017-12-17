@@ -1,6 +1,6 @@
 # Basic Bootstrap Template
 
-This is a simple Dashboard template, 
+This is a simple Bootstrap template, 
 made as a test for Html, Css and basic Javascript/Jquery.
 
 ## Development
